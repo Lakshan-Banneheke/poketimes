@@ -24,7 +24,7 @@ class Home extends Component {
         const postList = posts.length ? (
             posts.map(post => {
                 return (
-                    <div className="post card" key={posts.id}>
+                    <div className="post card" key={post.id}>
                         <img src={Pokeball} alt=""/>
                         <div className="card-content">
                             <Link to={"/" + post.id}>
@@ -37,7 +37,7 @@ class Home extends Component {
                 )
             })
         ) : (
-            <div className="center">No posts yet</div>
+            <div className="center" key={"No posts"}>No posts yet</div>
         )
         return (
             <div className="container home">
